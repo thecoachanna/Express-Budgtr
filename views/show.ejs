@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <title>Single Transaction</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1><%= name %></h1>
+      <div>
+        <strong> Date: </strong>
+
+        <div><%= date %></div>
+      </div>
+      <div>
+        <strong> Name: </strong>
+
+        <div><%= name %></div>
+      </div>
+      <div>
+        <strong> From: </strong>
+
+        <div><%= from %></div>
+      </div>
+      <div>
+        <strong> Amount: </strong>
+
+        <div><%= amount %></div>
+      </div>
+      <div>
+        <strong> Tags: </strong>
+
+        <div><%= tags %></div>
+      </div>
+      <button onclick="window.history.back()">BACK</button>
+    </div>
+    <form action="/budgets/<%= index %>?_method=DELETE" method="POST">
+            
+      <input type="submit" value="DELETE"/>
+    
+    </form>
+    
+  </body>
+</html>

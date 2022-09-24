@@ -1,0 +1,23 @@
+{
+  "name": "hw13_budgtr-",
+  "version": "1.0.0",
+  "description": "[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/thecoachanna/HW13_Budgtr-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "gitignore": "^0.7.0",
+    "method-override": "^3.0.0"
+  }
+}

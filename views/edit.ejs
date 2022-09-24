@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Update transaction:</h1>
+      <form action="/budgets/<%= index %>?_method=PUT" method="POST">
+        <input type="text" placeholder="<%= date %>" name="date" />
+        <input type="text" placeholder="<%= name %>" name="name" />
+
+        <input type="text" placeholder="<%= amount %>" name="amount" />
+        <input type="text" placeholder="<%= from %>" name="from" />
+        <input type="text" placeholder="<%= tags %>" name="tags" />
+        <button type="submit">UPDATE</button>
+      </form>
+    </div>
+  </body>
+</html>
+<!-- needs to bring in cherry tage index to form action route -->

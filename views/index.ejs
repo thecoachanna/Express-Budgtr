@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <title>Index of Budget</title>
+  </head>
+
+  <body class="<%= bankAccount < 0 ? 'backgroundnegative' : 'backgroundpositive' %>">
+    <div class="container">
+      <h1>Budgtr All</h1>
+
+<h5>Bank Account = <div id="bank-account">$<%= bankAccount %></div></h5>
+
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Update</th>
+      </tr>
+      <% for(let i = 0; i < Budget.length; i++) { %>
+      <tr>
+        <td><%= Budget[i].date %></td>
+        <td><a href="/budgets/<%= i %>"><%= Budget[i].name %></a></td>
+        <td><%= Budget[i].amount %></td>
+        <td><a href="/budgets/<%= i %>/edit">Update</a></td>
+      </tr>
+      <% } %>
+    </table>
+    <button onclick="window.location='/budgets/new'">New item</button>
+  </body>
+</html>
